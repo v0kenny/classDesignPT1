@@ -141,5 +141,11 @@ void printMetaData(Metadata metadata) {
 	cout << "Image Dimension : " << metadata.getWidth() << "x" << metadata.getHeight() << "\n";
 	cout << "Aperture Size: " << metadata.getApertureSize() << " \n";
 	cout << "Exposure Time: " << metadata.getExposureTime() << " \n";
-	cout << "Flash Enabled: " << metadata.isFlashEnabled() << " \n";
+	cout << "Flash Enabled: ";
+	if (metadata.isFlashEnabled()) {
+		std::cout << "Enabled" << "\n";
+	}
+	else {
+		std::cout << "Disabled" << "\n";
+	}
 }
