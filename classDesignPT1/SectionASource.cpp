@@ -30,7 +30,7 @@ std::string URLparser::getAuthority() {
         }
         index += 1;
     }
-    auth = URL.substr(URL.find_first_of("//") + 2, index - URL.find("/"));
+    auth = URL.substr(URL.find_first_of("//"), index - URL.find("/"));
 
     return auth;
 }
@@ -52,4 +52,3 @@ std::string URLparser::getPath() {
 
     return path;
 }
-
